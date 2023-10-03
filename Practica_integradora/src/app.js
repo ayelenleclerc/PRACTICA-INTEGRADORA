@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 import handlebars from "express-handlebars";
 import cookieParser from "cookie-parser";
 import config from "./config/config.js";
+import dotenv from "dotenv";
 
 import productsRouter from "./routes/products.router.js";
 import cartsRouter from "./routes/carts.router.js";
@@ -21,7 +22,10 @@ const app = express();
 
 const PORT = process.env.PORT || 8080;
 
-const connection = mongoose.connect(config.mongo.URL);
+const connection = mongoose.connect(
+  "mongodb+srv://Ayelenleclerc:yuskia13@backend.xrrgkdz.mongodb.net/ecommerce?retryWrites=true&w=majority"
+);
+console.log("Base de datos conectada");
 
 app.engine("handlebars", handlebars.engine());
 app.set("view engine", "handlebars");

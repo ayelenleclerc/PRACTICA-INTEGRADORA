@@ -1,7 +1,7 @@
 <h1 class="title">Productos</h1>
 <div class="container" id="container">
 
-  {{#each products.docs}}
+  {{#each products}}
     <div class="card" id={{this.id}}>
       <div class="card-body">
         <img class="card-img" src={{this.thumbnail}} alt={{this.title}} />
@@ -26,13 +26,13 @@
 
 <div class="paginationPanel">
   {{#if hasPrevPage}}
-    <a href="/?page={{prevPage}}"><button>Anterior</button></a>
+    <a href="/products/?page={{prevPage}}"><button>Anterior</button></a>
   {{/if}}
 
   <h4>{{page}}</h4>
 
   {{#if hasNextPage}}
-    <a href="/?page={{nextPage}}"><button>Siguiente</button></a>
+    <a href="/products/?page={{nextPage}}"><button>Siguiente</button></a>
   {{/if}}
 </div>
 

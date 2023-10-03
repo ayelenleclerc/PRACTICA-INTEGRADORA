@@ -20,7 +20,7 @@ router.get("/", async (req, res) => {
 });
 
 router.get("/products", async (req, res) => {
-  let { page = 1, limit = 5, sort, order = 1, ...filters } = req.query;
+  let { page = 1, limit = 10, sort, order = 1, ...filters } = req.query;
   const cleanFilters = getValidFilters(filters, "product");
   console.log(cleanFilters);
   let sortResult = {};

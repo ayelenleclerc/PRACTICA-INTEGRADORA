@@ -7,12 +7,12 @@ export const getValidFilters = (filters, documentType) => {
   const cleanFilter = {};
   //Aquí es muy importante que yo tenga ya un diccionario de filtros
   switch (documentType) {
-    case "videogame": {
-      if (filters.categories) {
+    case "product": {
+      if (filters.category) {
         if (typeof categories === "string") {
-          cleanFilter["categories"] = { $in: [filters.categories] };
+          cleanFilter["category"] = { $in: [filters.category] };
         } else {
-          cleanFilter["categories"] = { $in: filters.categories };
+          cleanFilter["category"] = { $in: filters.category };
         }
       }
       if (filters.gte) {

@@ -9,10 +9,11 @@ export default {
     PORT: process.env.PORT || 8080,
   },
   mongo: {
-    URL: process.env.MONGO_URL || "mongodb://localhost:27017",
+    URI: process.env.MONGO_URL || "mongodb://localhost:27017",
   },
   jwt: {
     COOKIE: process.env.JWT_COOKIE,
     SECRET: process.env.JWT_SECRET,
   },
 };
+console.log(process.env.MONGO_URL);
