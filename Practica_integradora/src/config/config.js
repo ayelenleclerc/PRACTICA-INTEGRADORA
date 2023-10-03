@@ -1,8 +1,6 @@
 import dotenv from "dotenv";
 
-dotenv.config({
-  path: "../../.env.dev",
-});
+dotenv.config();
 
 export default {
   app: {
@@ -16,4 +14,3 @@ export default {
     SECRET: process.env.JWT_SECRET,
   },
 };
-console.log(process.env.MONGO_URL);

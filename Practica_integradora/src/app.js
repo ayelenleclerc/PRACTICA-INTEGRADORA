@@ -22,9 +22,7 @@ const app = express();
 
 const PORT = process.env.PORT || 8080;
 
-const connection = mongoose.connect(
-  "mongodb+srv://Ayelenleclerc:yuskia13@backend.xrrgkdz.mongodb.net/ecommerce?retryWrites=true&w=majority"
-);
+const connection = mongoose.connect(config.mongo.URI);
 console.log("Base de datos conectada");
 
 app.engine("handlebars", handlebars.engine());
