@@ -75,7 +75,24 @@
   background-color: rgb(242, 73, 73);
   color: white;
 }
+.paginationPanel {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
 
+.page {
+  font-size: 16px;
+  margin: 5px;
+}
+.btn-paginate {
+  width: 100px;
+  height: 40px;
+  background-color: aqua;
+}
 .container {
   display: flex;
   justify-content: space-around;

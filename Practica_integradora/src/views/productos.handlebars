@@ -26,13 +26,17 @@
 
 <div class="paginationPanel">
   {{#if hasPrevPage}}
-    <a href="/products/?page={{prevPage}}"><button>Anterior</button></a>
+    <a href="/products/?page={{prevPage}}"><button
+        class="btn btn-paginate"
+      >Anterior</button></a>
   {{/if}}
 
-  <h4>{{page}}</h4>
+  <h4 class="page">{{page}}</h4>
 
   {{#if hasNextPage}}
-    <a href="/products/?page={{nextPage}}"><button>Siguiente</button></a>
+    <a href="/products/?page={{nextPage}}"><button
+        class="btn btn-paginate"
+      >Siguiente</button></a>
   {{/if}}
 </div>
 

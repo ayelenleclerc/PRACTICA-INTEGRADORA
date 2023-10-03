@@ -8,7 +8,7 @@ const router = Router();
 router.get("/", async (req, res) => {
   const products = await productService.paginateProducts(
     {},
-    { page: 1, limit: 10 }
+    { page: 1, limit: 5 }
   );
   res.send({ status: "success", payload: products });
 });
